@@ -1,6 +1,8 @@
 Polish scrabble anagram learnig app.
 Menu is in Polish.
 
+Diacritics in word lists should be substituted with numbers 1-9 in alphabetical order (Ą=1, Ć=2 etc.).
+
 All word lists should be stored in .txt files, each word in a different line.
 Solved anagram is deleted from the chosen list!!!
 
