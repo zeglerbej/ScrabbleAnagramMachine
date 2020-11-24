@@ -40,7 +40,7 @@ namespace Anagramy
                         result += 'Ź';
                         break;
                     case '9':
-                        result += 'Ć';
+                        result += 'Ż';
                         break;
                     default:
                         result += word[i];
