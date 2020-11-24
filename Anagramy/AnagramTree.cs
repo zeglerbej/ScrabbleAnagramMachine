@@ -21,7 +21,7 @@ namespace Anagramy
         public void Load(string s, Dictionary<char, int> Alphabet)
         {
             s = s.ToUpper();
-            string sorted = String.Concat(s.OrderBy(c => c));
+            string sorted = String.Concat(s.OrderBy(c => Alphabet[c]));
             AnagramTree p = this;
             int length = s.Length;
             for (int i = 0; i < length - 1; i++)
@@ -48,7 +48,7 @@ namespace Anagramy
         public void Search(AnagramTree at, string s, Dictionary<char, int> Alphabet, ListBox lb)
         {
             s = s.ToUpper();
-            string sorted = String.Concat(s.OrderBy(c => c));
+            string sorted = String.Concat(s.OrderBy(c => Alphabet[c]));
             AnagramTree p = at;
             int length = sorted.Length;
             int i;
@@ -89,7 +89,7 @@ namespace Anagramy
             {
                 foreach (string w in p.Words)
                 {
-                    if (lb.Items.Contains(w) == false) lb.Items.Add(w);
+                    if (lb.Items.Contains(Helpers.ConvertNumberToDiacritics(w)) == false) lb.Items.Add(Helpers.ConvertNumberToDiacritics(w));
                 }
             }
         }
